@@ -1,0 +1,82 @@
+Where clause:
+	SELECT * FROM employee WHERE employee_id = 101;
+
+	WHERE CLAUSE help to give exact output.
+	We can use Arithmetic,LIKE,BETWEEN,AND,IN,IS NULL,Logical operator with WHERE CLAUSE to get exact output.
+
+Using Comparison Operators:
+	SELECT * FROM employee WHERE salary > 10000;
+	SELECT * FROM employee WHERE salary = 1000 * 20;
+	SELECT employee_id FROM employee WHERE employee_id < 200;
+	SELECT * FROM employee WHERE manager_id != 100;
+	<> This is also not equal to sign.
+
+Using BETWEEN ... AND operator:
+	lower and upper limit are included.
+
+	SELECT * FROM employee WHERE salary BETWEEN 10000 AND 14000;
+	SELECT * FROM employee WHERE hire_date BETWEEN '07-JUN-02' AND '29-JAN-05';
+		
+Using IN Operator:
+	order of specified value is not important.
+	It will search for exact match
+
+	SELECT * FROM employee WHERE employee_id IN (50,100,65,210);
+	SELECT * FROM employee WHERE first _name IN ('Steven','Peter','Adam');
+	SELECT * FROM employee WHERE hire_date IN ('03-JAN-02','30-JUL-05');
+	
+Using LIKE operator:
+	used for searching some text in string values.
+	It is case sensative.
+	wildcard perform search and retrive row matching a certain character pattern.	
+
+	%	Matches any number of characters including 0 or more character
+	_	Matches exactly one character
+
+	SELECT * FROM employee WHERE last_name LIKE A%;
+	SELECT * FROM employee WHERE first_name LIKE STE%;
+	SELECT * FROM employee WHERE first_name LIKE STE_VE;
+	SELECT * FROM employee WHERE first_name LIKE _T%;
+
+Using IS NULL and IS NOT NULL operator:
+	Used for searching NULL value.
+	
+	SELECT * FROM employee WHERE last_name IS NULL;
+
+	SELECT * FROM employee WHERE last_name IS NOT NULL;
+
+Using LOGICAL operator:
+	AND: all condition must be true.
+	SELECT * FROM employee WHERE job_id = 'SA_REP' AND 
+		salary > 10000 AND first_name = 'Lisa';
+ 
+	OR: any one condition must be true.
+	SELECT * FROM employee WHERE job_id = 'SA_REP' OR
+		salary > 10000 ;
+	
+	NOT: Use to negate the condition
+	SELECT * FROM employee WHERE salary > 10000 AND job_id NOT IN ('SA_MAN', 'SA_REP');
+
+RULES OF PRECEDENCE:
+	order	Meaning
+	1	Arthimetic operators
+	2	Concatenation operator
+	3	Comparison condition
+	4	IS [NOT] NULL,LIKE,[NOT] IN
+	5	[NOT] BOOLEEAN
+	6	Not Equal to
+	7	NOT logical operator
+	8	AND logical operator
+	9	OR Logical operator
+
+	You can use parenthesis () for change preference
+	SELECT * FROM employeee WHERE (job_id = 'ST_CLERK' OR 
+	job_id = 'IT_PROG') AND salary > 5000; 
+	Here bydefault AND operator executed first but using () we change order of preference.
+	
+
+
+
+
+
+
