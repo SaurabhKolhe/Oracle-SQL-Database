@@ -1,0 +1,6 @@
+Column Aliases:
+	SELECT column1 AS "name",column2 AS "name2" FROM tbale_name;	
+	eg.
+	SELECT first_name , email FROM employee;
+	SELECT first_name AS "name" , email AS "E-mail" FROM employee;
+	

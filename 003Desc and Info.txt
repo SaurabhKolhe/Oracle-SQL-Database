@@ -1,0 +1,10 @@
+Describe Command:
+	Provide description of specified table.
+	DESCRIBE table_name 	OR
+	DESC table_name;
+
+Information Command:
+	Give all information about table.
+	INFORMATION table_name;		OR
+	INFO table_name;
+	INFO+ table_name;    (more info about table)

@@ -1,0 +1,7 @@
+Distinct and Unique operator:
+	SELECT DISTINCT job_id FROM employee;
+	Distinct keyword elimanate duplicate entry 
+	
+	We can write only one DISTINCT and before first column name in query.
+	SELECT DISTINCT job_id,department_id FROM employee;
+	

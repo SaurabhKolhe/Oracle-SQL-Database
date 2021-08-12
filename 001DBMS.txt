@@ -1,0 +1,73 @@
+Database Management System:
+It is collection of program which help user to manage data from database i.e. access,manipulate and retrive
+
+Why oracle:
+Security
+Performance
+Scalability
+Powerful coding (oracle sql and pl/sql)
+Oracle Support
+
+Cons:
+It is not free
+
+
+Relational DBMS (Tables)
+Accuarte
+Flexible
+COllaborative
+Trusted
+Secure
+
+Entity:
+The smallest unit containing a meaningful set of data is called 'Entity'.
+
+Database Object
+1.Schema Object:
+	Table
+	View
+	Constraints
+	Index
+	Sequence
+	Synonym
+	Materialized View
+	Functions and Procedure
+	Triggers
+	Packages
+	Database Links
+2.Nonschema Objects
+	directories
+	roles
+	tablespaces
+	users
+
+
+SQL (Structure Query Language)
+Used to interact with Database
+
+SQL is not CASE SENSETIVE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

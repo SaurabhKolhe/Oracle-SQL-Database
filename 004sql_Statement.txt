@@ -1,0 +1,18 @@
+SQL Statement:
+	SQL statements is not case sensative.
+	SQL statements can seperate in multiple line
+	Keyword cannot be abbreviated or split
+	SQL statement can be terminated by semicolon ; or a forward slash / sign but on new line.
+	Need to be atleast one space between 2 commands.	
+	
+SELECT Statement:
+	SELECT * FROM tableName;
+	SELECT column1,column2 FROM tableName;
+
+
+Quote Operator:
+	SELECT q'[I'm using quotes]' FROM dual;
+	We can replace [] with any letter.
+
+
+

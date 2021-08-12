@@ -1,0 +1,4 @@
+Concatenation Operators || :
+	Use to concatenate two or more column and return single column value.
+	SELECT first_name || ' ' || last_name AS "Full Name" FROM employee;
+	SELECT street_address || ',' || city || ',' || postal_code || ',' || sate|| ',' || country AS "Address" FROM employee;

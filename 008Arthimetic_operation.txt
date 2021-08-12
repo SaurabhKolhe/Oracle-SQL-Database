@@ -1,0 +1,9 @@
+Arithmetic Expression:
+	It contain column name,numerical value,arthmetic operator
+	SELECT employee_id , salary, salary*12 AS "Annual Salary" FROM employee;
+	SELECT employee_id , salary, salary + bonus AS "Salary with bonus" FROM employee;
+	
+	Also perform arthimetic operation on date value
+	SELLECT sysdate + 4 FROM dual;
+
+	Arthmetic operation with null return null.

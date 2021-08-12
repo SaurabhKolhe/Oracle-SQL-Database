@@ -1,0 +1,38 @@
+Data Types
+1.VARCHAR2(size):
+	Variable length character data 
+
+2.CHAR(size):
+	Fixed length of character data
+
+3.NUMBER(p , s):
+	Variable length numeric data
+
+4.DATE:
+	Date and Time values
+
+5.BLOB:
+	Use to store images,video etc.
+
+6.CLOB:
+	Use to store long character value ,high capacity, fast performance
+
+7.BFILE:
+	External Large object.store pointer of object,read only,store image video
+
+8.RowID:
+	Represent unique address of row in the table
+
+9.LONG:
+	Variable length character data (upto 2gb)
+
+10.RAW and LONG DATA:
+	Raw binary data.
+	
+
+NULL Value:
+	It indicates state that items value is unknown or does not exist.
+	It not take space on database
+
+NOT NULL:
+	We cannot enter  null value in it or we must have to enter something in that coloumn.
