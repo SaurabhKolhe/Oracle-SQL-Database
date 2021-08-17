@@ -1,0 +1,88 @@
+Substitution Variable:
+	The substitution variable is placeholder in an sql script where you want to substituye some values at runtime.
+	The & character is used before substitution variable in query.
+	
+	SELECT employee_id, first_name, last_name FROM employee
+	WHERE department_id = &department_no;
+	
+	for string and date
+	SELECT employee_id, first_name, last_name FROM employee
+	WHERE first_name = '&name';
+
+	When we execute query it will ask to enter value.
+	
+	Substitution variable is not feature of sql script ,It is feature of sql tool.
+
+	We can use more than one substitution variable in single query
+	SELECT employee_id, first_name, last_name, &column_name FROM &table_name
+	WHERE &condition ORDER BY &order_by
+
+Double Ampersand (&&) Define and Undefine command:
+	SELECT employee_id, first_name,last_name FROM employee 
+	WHERE salary BETWEEN &sal AND &sal + 1000;
+
+	sql developer ask for sal value for 2 times.
+
+	SELECT employee_id, first_name,last_name FROM employee 
+	WHERE salary BETWEEN &&sal AND &sal + 1000;
+	
+	By using && it will ask only once for sal value.
+	Value of sal is get store for session.
+
+	Define command is use to define value for the substitution variable.
+	Define command is same as &&.
+	It is store in memory for session.
+
+	DEFINE emp_no = 100;
+	SELECT * FROM employees WHERE employee_id =&emp_no;
+
+	To change the value of substitution variable you just need to change value from define command
+	DEFINE emp_no = 200;
+
+	To see all substitution variable:
+	DEFINE;
+	To check specific variable:
+	DEFINE emp_no;
+
+	To delete/remove variable from memory you have to use UNDEFINE command
+	UNDEFINE emp_no;
+
+	You can use DEF and UNDEF instead of DEFINE and UNDEFINE.
+
+ACCEPT and PROMPT
+	ACCEPT take input from user and store it in user variable.
+	PROMPT command is used to display a message to the user for supplying a brief explaination of what your script is going to accomplish.
+
+	ACCEPT emp_id PROMPT 'Enter valid employee id:';
+	SELECT * FROM employees WHERE employee_id = &emp_id;
+
+	ACCEPT min_sal PROMPT 'Enter minimum salary:';
+	ACCEPT max_sal PROMPT 'Enter maximum salary:';	
+	SELECT * FROM employee WHERE salary BETWEEN &min_sal and &max_sal;
+
+SET VERIFY ON/OFF:
+	VERIFY command displays the status of the variable before and after the substitution.
+	It can use in 2 ways:	
+	SET VERIFY ON;	To turn on verification
+	SET VERIFY OFF;	To turn off verification
+
+	SET VERIFY ON;
+	SELECT employee_id, first_name, last_name FROM employees
+	WHERE employee_id = &emp_id;
+
+	
+	SET VERIFY OFF;
+	SELECT employee_id, first_name, last_name FROM employees
+	WHERE employee_id = &emp_id;
+
+SET DEFINE OFF:
+	If in employee table there is department called R&D and you want to get its employee
+
+	SELECT * FROM employee WHERE department_name = 'R&D';
+
+	Above command will ask for value as it take &D as substitution variable
+	In this case you can use SET DEFINE OFF command
+	It will turn off substitution variable for session
+
+	SET DEFINE OFF;
+	SELECT * FROM employee WHERE employee_id = 'R&D';

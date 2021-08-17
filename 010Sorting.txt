@@ -1,0 +1,73 @@
+Changes the returning rows order by any column or alias or numeric positions of the column in SELECT list.
+
+Can sort the retrieved row in ASC or DESC order.
+if we not specify anything for type order, the default order is ascending.
+
+SELECT column1,column2 FROM table_name WHERE condition ORDER BY column_name;
+
+Example:
+	SELECT first_name,last_name,salary FROM employee ORDER BY first_name;
+	
+Order by can sort with multiple column
+	SELECT first_name,last_name,salary FROM employee ORDER BY first_name,last_name;
+
+Order by clause can use with column position in SELECT list or column order in database
+	SELECT * FROM employee ORDER BY 1;
+	SELECT * FROM employee ORDER BY 5;
+
+ASC and DESC:
+	By default order by is in ASC.
+	
+	Sort by Descending order
+	SELECT first_name,last_name,salary FROM employee ORDER BY first_name desc;
+	
+	SELECT first_name,last_name,salary FROM employee ORDER BY first_name,last_name desc;
+
+	Aliases and numeric position of column can use with asc and desc
+	SELECT first_name,last_name,salary s FROM employee ORDER BY first_name desc,3 desc,s ;
+	
+NULL value sorting (NULLS FIRST and NULLS LAST):
+	Commision column having some null values
+	SELECT first_name,last_name,salary,commision FROM employee ORDER BY commision ;
+	
+	SELECT first_name,last_name,salary,commision FROM employee ORDER BY commision NULLS FIRST;
+
+	SELECT first_name,last_name,salary,commision FROM employee ORDER BY commision NULLS LAST;
+
+ROWID and ROWNUM:
+
+	ROWID				ROWNUM
+
+ The ROWID is a unique identifier      The ROWNUM is nothing but the
+ that contain the physical address     consecutive logical sequence no
+ of row.			       given to the row fetch from table
+ autimatically generate ROWID
+
+ ROWID is Permanant and doesn't	       ROWNUM is temparary
+ change
+
+ Fastest way to access single row is
+ using its ROWID
+
+
+FETCH Clause:
+The FETCH clause is used in conjunction with the SELECT and ORDER BY clauses to limit the rows and retrive a portion of returning rows.
+
+[OFFSET row_to_skip ROW[S]] FETCH [FIRST][NEXT] [row_count | percent PERCENT] ROW[S] [ONLY | WITH TIES];
+OFFSET = exclude no of rows from top
+FETCH  = retreive no of  rows
+only = retreive exact no of rows
+TIES WITH = retrive exact no of rows with rows with same as last row result.
+	    have to use ORDER BY to use WITH TIES
+
+	SELECT first_name,last_name,salary FROM employee ORDER BY salary DESC
+	OFFSET 1 ROW FETCH FIRST 10 ROWS ONLY;
+	Here it will retrieve exact 10 rows.
+
+	SELECT first_name,last_name,salary FROM employee ORDER BY salary DESC
+	OFFSET 1 ROW FETCH 10 ROWS WITH TIES;
+	Here it will return 10 rows and if salary of other row is same as 10 then it will return that also	       
+
+
+
+
