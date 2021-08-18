@@ -29,5 +29,3 @@ It convert Character to upper case or lower case
 	SELECT * FROM employees WHERE INITCAP(last_name)='King';
 
 	SELECT * FROM employees WHERE UPPER(first_name)='JOHN';
-
-	
