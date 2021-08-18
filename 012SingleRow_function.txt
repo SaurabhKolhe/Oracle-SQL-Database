@@ -1,0 +1,24 @@
+What is Function:
+	Functions are created for manipulating the data and returning a value.
+	Function must be created before calling them.
+	Function are formely created codes that reside in the database.They can be called easily by typing their names and parameters.
+	A Function is bunched od code created for reuse,
+	There are two types of functions:
+	1.Single Row Functions
+	2.Multiple Row FunctionS
+
+Single Row Functions:
+	One or more arguments and return one output.
+	The single row functions operate on single row and return only one result per row.
+	Return vallue for each row.
+	Can be used alone or nested.
+	A column or expression can be used as arguments.
+	Can be used in SELECT,WHERE or ORDER BY clauses.
+
+	5 Types of Single Row Functions:
+		 	input		 output
+	Character	Character	Character or Numeric
+	Numeric		Numeric		Numeric
+	Date		Date		Date
+	General		It is mainly use to handle NULL values.
+	Conversion	convert the datatype

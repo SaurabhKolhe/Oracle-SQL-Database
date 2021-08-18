@@ -1,0 +1,33 @@
+Character Functions:
+	It takes Character data as Input and return Character or numeric data as Output.
+	There are 2 different character functions:
+	1.Case Conversion functions	
+	2.Character Manipulation functions
+
+
+1.Case Conversion functions:
+It convert Character to upper case or lower case
+	1.UPPER function
+		all character to uppercase character
+	2.LOWER function
+		all character to lowercase character
+	3.INITCAP function
+		convert first letter of each word to uppercase and rest to lowercase.
+
+		LOWER('Adam SMITH')		adam smith
+		UPPER('Adam SMITH')		ADAM SMITH
+		INITCAP('Adam SMITH')		Adam Smith
+
+
+	SELECT INIT(first_name),LOWER(last_name),UPPER(email) 
+	FROM employees;
+	
+	SELECT * FROM employees WHERE UPPER(last_name)='KING';
+
+	SELECT * FROM employees WHERE LOWER(last_name)='king';
+
+	SELECT * FROM employees WHERE INITCAP(last_name)='King';
+
+	SELECT * FROM employees WHERE UPPER(first_name)='JOHN';
+
+	
